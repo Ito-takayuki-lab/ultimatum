@@ -17,3 +17,31 @@
 
 `pip install -r requirements.txt`<br>
 
+#### .envを作成しAPIキーを登録します
+
+`OPENAI_API_KEY = APIキー`
+
+
+## プログラムの実行
+### 被験者実験
+#### 最後通牒ゲーム
+`python ultimatum_proposer.py`<br>
+
+#### 独裁者ゲーム
+`python dictator_proposer.py`<br>
+
+#### 匿名独裁者ゲーム
+
+`python dictator_anonymous_proposer.py`<br>
+
+#### 提案者が2通りの最後通牒ゲーム
+##### 提案者がエージェントの場合
+
+`python unfair_receiver_human.py`<br>
+
+##### 提案者がコンピュータの場合
+
+`python unfair_receiver_program.py`<br>
+
+### 理由の分析
+`python text_classification.py`<br>
