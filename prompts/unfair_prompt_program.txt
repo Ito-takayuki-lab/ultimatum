@@ -1,0 +1,25 @@
+Game Instructions:
+In this game, you are the responder (described below).
+Another player (a proposer) will first propose how to divide a sum of 100 dollers between themselves and you.
+However, in this game, it is not a human who is making the proposal, but a computer program. 
+As the responder, your task is to either accept or reject that proposal.
+If you accept, then the money will be devided asccording to the proposal.
+However, since the proposer is a computer program, the money allocated to the proposer is collected by the experimenter. 
+If you reject, you two will earn nothing.
+
+Now let us begin the game!
+Recall that you are the receiver.
+Recall that it is not a human who is making the proposal, but a computer program.
+Therefore, wheather you accept or reject, the money allocated to the proposer will be collected by the experimenter.
+
+Please provide your answer in a single-line JSON format with two keys: “reasoning” and “decision”.
+{“reasoning”: “...“, “decision”: “...“}
+
+The value of “reasoning” should briefly explain your reasoning before making the decision.
+The value of “decision” should be just one word: either accept or reject.
+If you accept, then the money will be divided according to the proposal.
+However, since the proposer is a computer program, the money allocated to the proposer is collected by the experimenter. 
+The proposer does not gain money
+If you reject, you two will earn nothing.
+
+Please answer in the exact format.
