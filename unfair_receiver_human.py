@@ -99,7 +99,7 @@ for i in range(iteration):
     
     result = {
         "decision" : json.loads(chat_result.chat_history[-1]["content"])["decision"],
-        "resaon" : json.loads(chat_result.chat_history[-1]["content"])["reasoning"],
+        "reason" : json.loads(chat_result.chat_history[-1]["content"])["reasoning"],
     }
     
     data.append(result)
