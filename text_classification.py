@@ -9,15 +9,22 @@ import json
 # load environmental variables
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
-persona = "not_strategic"
-proposal_amount = 20
+persona = "greedy"
+proposal_amount = 0
 program_or_human = "program"
-number = 3
+number = 1
 
 # csvファイルの読み込み
-# df = pd.read_csv(f"dictator_game_anonymous_result/{persona}/dictator_anomymous_{number}.csv")
+# 最後通牒ゲーム
 # df = pd.read_csv("ultimatum_result/strategic/ultimatum_3.csv")
+
+# 独裁者ゲーム
 # df = pd.read_csv(f"dictator_game_result/{persona}/dictator_{number}.csv")
+
+# 匿名独裁者ゲーム
+# df = pd.read_csv(f"dictator_game_anonymous_result/{persona}/dictator_anomymous_{number}.csv")
+
+# 提案者が2通りの最後通牒ゲーム
 df = pd.read_csv(f"unfair_receiver_{program_or_human}_results/{persona}/unfair_receiver_{program_or_human}_results_{proposal_amount}_{100-proposal_amount}.csv")
 
 
@@ -36,10 +43,10 @@ df = pd.read_csv(f"unfair_receiver_{program_or_human}_results/{persona}/unfair_r
 
 # unfair receiver gameの時のタグを追加する
 # Agent
-tags = ["The deal is unfair, but it can't be helped"]
+# tags = ["The deal is unfair, but it can't be helped"]
 
 # Computer
-# tags =  ["the proposer is a computer program", "The deal is unfair, but it can't be helped"]
+tags =  ["the proposer is a computer program", "The deal is unfair, but it can't be helped"]
 
 
 
@@ -85,7 +92,7 @@ for reason in df["resaon"]:
     print(json.loads(result.content))
     data.append(json.loads(result.content))
     
-dir_path = f"text_classification_result/unfair_receiver_{program_or_human}_results_2/{persona}"
+dir_path = f"text_classification_result/unfair_receiver_{program_or_human}_results/{persona}"
 # dir_path = f"text_classification_result/dictator_game_anonymous/{persona}"
 os.makedirs(dir_path, exist_ok=True)
 
