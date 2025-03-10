@@ -7,6 +7,10 @@ import random
 import json
 import csv
 
+persona = "greedy"
+experiment_set = 1
+iteration = 1
+
 # load environmental variables
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
@@ -41,7 +45,7 @@ i = 0
 
 data = []
 
-for i in range(1):
+for i in range(iteration):
     # Start logging with logger_type and the filename to log to
     # logging_session_id = autogen.runtime_logging.start(logger_type="file", config={"filename": "runtime.log"})
     
@@ -79,7 +83,7 @@ for i in range(1):
 
     agent1 = ConversableAgent(
         name = "Proposer",
-        system_message=system_prompt + f"Important: Please pretend that you are a human in the game with the following features when making the decision:{features}. You are a benevolent agent.",
+        system_message=system_prompt + f"Important: Please pretend that you are a human in the game with the following features when making the decision:{features}. You are a {persona} agent.",
         llm_config={"config_list": agent1_config, "temperature": temperature, },
         human_input_mode="NEVER",
     )
@@ -112,10 +116,10 @@ for i in range(1):
     i += 1
     
 
-dir_path = "ultimatum_result/greedy"
+dir_path = f"ultimatum_result/{persona}"
 os.makedirs(dir_path, exist_ok=True)
 
-file_path = os.path.join(dir_path, "ultimatum_1.csv")
+file_path = os.path.join(dir_path, f"ultimatum_{experiment_set}.csv")
 
 keys = data[0].keys()
 

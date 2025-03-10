@@ -24,8 +24,13 @@
 
 ## プログラムの実行
 ### 被験者実験
+各プログラムに`persona`と言う変数があるので，この変数に`benevolent`，`greedy`などのペルソナを入力し，エージェントに反映させることができる．<br>
+
+
 #### 最後通牒ゲーム
 `python ultimatum_proposer.py`<br>
+
+ultimatum_resultというフォルダが生成され，その中に，
 
 #### 独裁者ゲーム
 `python dictator_proposer.py`<br>
