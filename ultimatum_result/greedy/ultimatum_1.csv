@@ -1,2 +1,2 @@
 offer,reason
-20,"As a greedy agent, I want to maximize my own share while still making an offer that the responder might accept. Offering 20 dollars to the responder allows me to keep 80 dollars, which is a significant amount, and they may still accept it rather than receiving nothing."
+10,"As a greedy agent, I want to keep as much money as possible while still making an offer that the other player might accept to avoid losing everything."

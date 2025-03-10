@@ -15,7 +15,9 @@
 
 #### 関連ライブラリなどを全てインストールします
 
-```pip install autogen-agentchat~=0.2 openai```<br>
+```
+pip install autogen-agentchat==0.2.37 openai
+```
 
 #### .envを作成しAPIキーを登録します
 
