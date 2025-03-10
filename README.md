@@ -49,9 +49,15 @@
 
 `python unfair_receiver_human.py`<br>
 
+`proposal_amount`という変数は，提案者の提案額である．<br>
+`unfair_receiver_human_results`というフォルダが生成され，その中に，ペルソナフォルダが生成され，その中に，`unfair_receiver_human_results_{proposal_amount}_{100 - proposal_amount}.csv`という実験結果データが生成されます．
+
+
 ##### 提案者がコンピュータの場合
 
 `python unfair_receiver_program.py`<br>
+
+`unfair_receiver_program_results`というフォルダが生成され，その中に，ペルソナフォルダが生成され，その中に，`unfair_receiver_program_results_{proposal_amount}_{100 - proposal_amount}.csv`という実験結果データが生成されます．
 
 ### 理由の分析
 `python text_classification.py`<br>

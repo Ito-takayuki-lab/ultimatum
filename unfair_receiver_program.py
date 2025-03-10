@@ -7,6 +7,11 @@ import random
 import json
 import csv 
 
+persona = "greedy"
+iteration = 1
+proposal_ammount = 0
+
+
 # load environmental variables
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
@@ -38,10 +43,7 @@ i = 0
 
 data = []
 
-proposal_ammount = 30
-persona = "strategic"
-
-for i in range(100):
+for i in range(iteration):
     
     random1 = random.uniform(0, 1)
     personality_agent = ConversableAgent(
