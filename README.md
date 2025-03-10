@@ -7,11 +7,15 @@
 ## 環境構築の手順
 #### anacondaでpythonの仮想環境を作成します．pythonバージョンは3.10を用います． <br>
 
-`conda create -n (環境名) --file conda_requirements.txt`<br>
+`conda create -n (環境名) python=3.10`<br>
 
 #### 環境をアクティブにします<br>
 
 `conda activate (環境名)`<br>
+
+#### 関連ライブラリなどを全てインストールします
+
+```pip install autogen-agentchat~=0.2 openai```<br>
 
 #### .envを作成しAPIキーを登録します
 
