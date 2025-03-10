@@ -24,20 +24,25 @@
 
 ## プログラムの実行
 ### 被験者実験
-各プログラムに`persona`と言う変数があるので，この変数に`benevolent`，`greedy`などのペルソナを入力し，エージェントに反映させることができる．<br>
-
+各プログラムに`persona`という変数があるので，この変数に`benevolent`，`greedy`などのペルソナを入力し，エージェントに反映させることができます．<br>
+`iteration`という変数は一回の実験で何体のエージェントで実験を行うかを決めます．<br>
+`experiment_set`と言う変数は，実験を区切る数字です．例えば，エージェント100体での実験を3回に分けて行いたい場合は，`iteration=100`とし，`experiment_set`は，1，2，3に分けて実験を行います．
 
 #### 最後通牒ゲーム
 `python ultimatum_proposer.py`<br>
 
-ultimatum_resultというフォルダが生成され，その中に，
+`ultimatum_result`というフォルダが生成され，その中に，ペルソナフォルダが生成され，さらにその中に，`ultimatum_{experiment_set}.csv`という実験結果データが生成されます．
 
 #### 独裁者ゲーム
 `python dictator_proposer.py`<br>
 
+`dictator_game_result`というフォルダが生成され，その中に，ペルソナフォルダが生成され，その中に，`dictator_{experiment_set}.csv`という実験結果データが生成されます．
+
 #### 匿名独裁者ゲーム
 
 `python dictator_anonymous_proposer.py`<br>
+
+`dictator_game_anonymous_result`というフォルダが生成され，その中に，ペルソナフォルダが生成され，その中に，`dictator_anonymous_{experiment_set}.csv`という実験結果データが生成されます．
 
 #### 提案者が2通りの最後通牒ゲーム
 ##### 提案者がエージェントの場合

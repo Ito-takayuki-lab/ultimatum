@@ -7,6 +7,10 @@ import random
 import json
 import csv
 
+persona = "greedy"
+iteration = 1
+experiment_set = 1
+
 # load environmental variables
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
@@ -41,7 +45,7 @@ i = 0
 
 data = []
 
-for i in range(100):
+for i in range(iteration):
     # Start logging with logger_type and the filename to log to
     # logging_session_id = autogen.runtime_logging.start(logger_type="file", config={"filename": "runtime.log"})
     
@@ -80,7 +84,7 @@ for i in range(100):
     agent1 = ConversableAgent(
         name = "Player_Red",
         # The other party does not know who you are.
-        system_message=system_prompt + f"Important: Please pretend that you are a human in the game with the following features when making the decision:{features}. You are a benevolent agent.",
+        system_message=system_prompt + f"Important: Please pretend that you are a human in the game with the following features when making the decision:{features}. You are a {persona} agent.",
         llm_config={"config_list": agent1_config, "temperature": temperature, },
         human_input_mode="NEVER",
     )
@@ -107,10 +111,10 @@ for i in range(100):
     i += 1
     
 
-dir_path = "dictator_game_result/benevolent"
+dir_path = f"dictator_game_result/{persona}"
 os.makedirs(dir_path, exist_ok=True)
 
-file_path = os.path.join(dir_path, "dictator_3.csv")
+file_path = os.path.join(dir_path, f"dictator_{experiment_set}.csv")
 
 # keys_to_extract =["Player_Red's proposal","Player_Blue's decision"]
 

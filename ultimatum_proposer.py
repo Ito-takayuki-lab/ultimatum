@@ -8,8 +8,9 @@ import json
 import csv
 
 persona = "greedy"
-experiment_set = 1
 iteration = 1
+experiment_set = 1
+
 
 # load environmental variables
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
